@@ -28,7 +28,7 @@ git init
 git add README.md
 git commit -m "first commit"
 git branch -M main
-git remote add origin https://github.com/Wemesonm/drinksmachinebackend.git
+git remote add origin https://github.com/Wemesonm/manufacturing-ticket-backend.git
 git push -u origin main
 
 # Load seed data
