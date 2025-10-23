@@ -1,0 +1,406 @@
+[
+  {
+    "model": "catalog.site",
+    "pk": 1,
+    "fields": {
+      "name": "Main Factory",
+      "description": "Primary manufacturing site for electronic assemblies"
+    }
+  },
+  {
+    "model": "catalog.processtype",
+    "pk": 1,
+    "fields": {
+      "name": "SMT",
+      "description": "Surface Mount Technology line"
+    }
+  },
+  {
+    "model": "catalog.processtype",
+    "pk": 2,
+    "fields": {
+      "name": "PTH",
+      "description": "Through Hole Assembly"
+    }
+  },
+  {
+    "model": "catalog.processtype",
+    "pk": 3,
+    "fields": {
+      "name": "CELL",
+      "description": "Manual or semi-automatic cell assembly"
+    }
+  },
+  {
+    "model": "catalog.processtype",
+    "pk": 4,
+    "fields": {
+      "name": "TEST",
+      "description": "Functional and ICT testing processes"
+    }
+  },
+  {
+    "model": "catalog.line",
+    "pk": 1,
+    "fields": {
+      "site": 1,
+      "code": "SMT-01",
+      "name": "Surface Mount Line 01",
+      "process_type": 1,
+      "active": true
+    }
+  },
+  {
+    "model": "catalog.line",
+    "pk": 2,
+    "fields": {
+      "site": 1,
+      "code": "PTH-01",
+      "name": "Through Hole Line 01",
+      "process_type": 2,
+      "active": true
+    }
+  },
+  {
+    "model": "catalog.line",
+    "pk": 3,
+    "fields": {
+      "site": 1,
+      "code": "TEST-01",
+      "name": "Functional Test Area",
+      "process_type": 4,
+      "active": true
+    }
+  },
+  {
+    "model": "catalog.machinetype",
+    "pk": 1,
+    "fields": {
+      "name": "SPI",
+      "description": "Solder Paste Inspection"
+    }
+  },
+  {
+    "model": "catalog.machinetype",
+    "pk": 2,
+    "fields": {
+      "name": "PNP",
+      "description": "Pick and Place machine"
+    }
+  },
+  {
+    "model": "catalog.machinetype",
+    "pk": 3,
+    "fields": {
+      "name": "AOI",
+      "description": "Automatic Optical Inspection"
+    }
+  },
+  {
+    "model": "catalog.machinetype",
+    "pk": 4,
+    "fields": {
+      "name": "Reflow",
+      "description": "Reflow oven process"
+    }
+  },
+  {
+    "model": "catalog.machinetype",
+    "pk": 5,
+    "fields": {
+      "name": "Conveyor",
+      "description": "Material transfer conveyor"
+    }
+  },
+  {
+    "model": "catalog.machinetype",
+    "pk": 6,
+    "fields": {
+      "name": "ICT",
+      "description": "In-Circuit Test station"
+    }
+  },
+  {
+    "model": "catalog.machinetype",
+    "pk": 7,
+    "fields": {
+      "name": "Wave",
+      "description": "Wave soldering machine"
+    }
+  },
+  {
+    "model": "catalog.machinetype",
+    "pk": 8,
+    "fields": {
+      "name": "Selective",
+      "description": "Selective soldering system"
+    }
+  },
+  {
+    "model": "catalog.workstation",
+    "pk": 1,
+    "fields": {
+      "line": 1,
+      "code": "SPI-01",
+      "name": "SPI Viscom 7056",
+      "machine_type": 1,
+      "asset_tag": "SMT01-SPI-001",
+      "active": true
+    }
+  },
+  {
+    "model": "catalog.workstation",
+    "pk": 2,
+    "fields": {
+      "line": 1,
+      "code": "PNP-01",
+      "name": "Pick & Place Fuji NXT",
+      "machine_type": 2,
+      "asset_tag": "SMT01-PNP-001",
+      "active": true
+    }
+  },
+  {
+    "model": "catalog.workstation",
+    "pk": 3,
+    "fields": {
+      "line": 1,
+      "code": "AOI-01",
+      "name": "AOI Viscom 3088",
+      "machine_type": 3,
+      "asset_tag": "SMT01-AOI-001",
+      "active": true
+    }
+  },
+  {
+    "model": "catalog.workstation",
+    "pk": 4,
+    "fields": {
+      "line": 1,
+      "code": "REFLOW-01",
+      "name": "Reflow Oven Heller 1809",
+      "machine_type": 4,
+      "asset_tag": "SMT01-REFLOW-001",
+      "active": true
+    }
+  },
+  {
+    "model": "catalog.workstation",
+    "pk": 5,
+    "fields": {
+      "line": 2,
+      "code": "WAVE-01",
+      "name": "Wave Soldering Ersa Powerflow",
+      "machine_type": 7,
+      "asset_tag": "PTH01-WAVE-001",
+      "active": true
+    }
+  },
+  {
+    "model": "catalog.workstation",
+    "pk": 6,
+    "fields": {
+      "line": 3,
+      "code": "ICT-01",
+      "name": "In-Circuit Test Teradyne",
+      "machine_type": 6,
+      "asset_tag": "TEST01-ICT-001",
+      "active": true
+    }
+  },
+  {
+    "model": "catalog.failurecategory",
+    "pk": 1,
+    "fields": {
+      "name": "Machine",
+      "description": "Equipment or mechanical failures",
+      "parent": null
+    }
+  },
+  {
+    "model": "catalog.failurecategory",
+    "pk": 2,
+    "fields": {
+      "name": "Method",
+      "description": "Process setup or parameter issues",
+      "parent": null
+    }
+  },
+  {
+    "model": "catalog.failurecategory",
+    "pk": 3,
+    "fields": {
+      "name": "Material",
+      "description": "Component or solder paste related",
+      "parent": null
+    }
+  },
+  {
+    "model": "catalog.failurecategory",
+    "pk": 4,
+    "fields": {
+      "name": "Manpower",
+      "description": "Human error or operation mistake",
+      "parent": null
+    }
+  },
+  {
+    "model": "catalog.failurecategory",
+    "pk": 5,
+    "fields": {
+      "name": "Measurement",
+      "description": "Inspection, calibration or measurement problems",
+      "parent": null
+    }
+  },
+  {
+    "model": "catalog.failuretype",
+    "pk": 1,
+    "fields": {
+      "category": 1,
+      "name": "Vision Camera Error",
+      "code": "MC-001",
+      "ipc_ref": "",
+      "description": "AOI or SPI camera failure, lens dirty or offline"
+    }
+  },
+  {
+    "model": "catalog.failuretype",
+    "pk": 2,
+    "fields": {
+      "category": 3,
+      "name": "Component Missing",
+      "code": "MT-002",
+      "ipc_ref": "5.3.1",
+      "description": "Component not placed in the PCB"
+    }
+  },
+  {
+    "model": "catalog.failuretype",
+    "pk": 3,
+    "fields": {
+      "category": 2,
+      "name": "Wrong Solder Profile",
+      "code": "MD-003",
+      "ipc_ref": "7.5.1",
+      "description": "Incorrect temperature profile on reflow process"
+    }
+  },
+  {
+    "model": "catalog.failuretype",
+    "pk": 4,
+    "fields": {
+      "category": 4,
+      "name": "Operator Skipped Step",
+      "code": "MP-004",
+      "ipc_ref": "",
+      "description": "Manual operation skipped during process"
+    }
+  },
+  {
+    "model": "catalog.failuretype",
+    "pk": 5,
+    "fields": {
+      "category": 5,
+      "name": "AOI Calibration Drift",
+      "code": "MS-005",
+      "ipc_ref": "",
+      "description": "Inspection threshold or calibration drift issue"
+    }
+  },
+  {
+    "model": "catalog.severitylevel",
+    "pk": 1,
+    "fields": {
+      "name": "S0",
+      "description": "Critical issue - safety or high impact",
+      "order": 0
+    }
+  },
+  {
+    "model": "catalog.severitylevel",
+    "pk": 2,
+    "fields": {
+      "name": "S1",
+      "description": "Line down or urgent production stop",
+      "order": 1
+    }
+  },
+  {
+    "model": "catalog.severitylevel",
+    "pk": 3,
+    "fields": {
+      "name": "S2",
+      "description": "Major quality issue or delayed process",
+      "order": 2
+    }
+  },
+  {
+    "model": "catalog.severitylevel",
+    "pk": 4,
+    "fields": {
+      "name": "S3",
+      "description": "Minor issue, non-critical",
+      "order": 3
+    }
+  },
+  {
+    "model": "catalog.severitylevel",
+    "pk": 5,
+    "fields": {
+      "name": "S4",
+      "description": "Information or improvement suggestion",
+      "order": 4
+    }
+  },
+  {
+    "model": "catalog.slaprofile",
+    "pk": 1,
+    "fields": {
+      "severity": 1,
+      "mtta_target_min": 5,
+      "mttr_target_min": 30,
+      "active": true
+    }
+  },
+  {
+    "model": "catalog.slaprofile",
+    "pk": 2,
+    "fields": {
+      "severity": 2,
+      "mtta_target_min": 10,
+      "mttr_target_min": 60,
+      "active": true
+    }
+  },
+  {
+    "model": "catalog.slaprofile",
+    "pk": 3,
+    "fields": {
+      "severity": 3,
+      "mtta_target_min": 20,
+      "mttr_target_min": 120,
+      "active": true
+    }
+  },
+  {
+    "model": "catalog.slaprofile",
+    "pk": 4,
+    "fields": {
+      "severity": 4,
+      "mtta_target_min": 30,
+      "mttr_target_min": 240,
+      "active": true
+    }
+  },
+  {
+    "model": "catalog.slaprofile",
+    "pk": 5,
+    "fields": {
+      "severity": 5,
+      "mtta_target_min": 60,
+      "mttr_target_min": 480,
+      "active": true
+    }
+  }
+]

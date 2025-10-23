@@ -10,6 +10,8 @@ python manage.py createsuperuser
 python manage.py runserver
 pip freeze > requirements.txt
 
+pip install django-cors-headers
+
 # Fazer Migracoes
 
 python manage.py makemigrations
@@ -37,10 +39,4 @@ python manage.py loaddata "nome do arquivo
 
 # Para fazer o download de todos os dados
 
-python manage.py dumpdata references items drinks recipes --indent 2 > project_backup.json
-python manage.py dumpdata references --indent 2 --output recipes/fixtures/recipes.json
-python manage.py dumpdata references.ItemType --indent 2 --output references/fixtures/itemtype.json
-python manage.py dumpdata references.Unit --indent 2 --output references/fixtures/unit.json
-python manage.py dumpdata references.IceType --indent 2 --output references/fixtures/icetype.json
-python manage.py dumpdata references.GlassType --indent 2 --output references/fixtures/glasstype.json
-python manage.py dumpdata items --indent 2 --output items/fixtures/items.json
+python manage.py loaddata catalog_seed.json

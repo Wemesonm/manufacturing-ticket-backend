@@ -1,0 +1,93 @@
+[
+  {
+    "model": "tickets.ticketstatus",
+    "pk": 1,
+    "fields": {
+      "code": "OPEN",
+      "name": "Open",
+      "description": "Ticket created by line leader",
+      "order": 1,
+      "is_final": false,
+      "color": "#3498db",
+      "active": true
+    }
+  },
+  {
+    "model": "tickets.ticketstatus",
+    "pk": 2,
+    "fields": {
+      "code": "ACCEPTED",
+      "name": "Accepted",
+      "description": "Support team accepted the ticket",
+      "order": 2,
+      "is_final": false,
+      "color": "#1abc9c",
+      "active": true
+    }
+  },
+  {
+    "model": "tickets.ticketstatus",
+    "pk": 3,
+    "fields": {
+      "code": "ON_SITE",
+      "name": "On Site",
+      "description": "Support arrived at the line",
+      "order": 3,
+      "is_final": false,
+      "color": "#9b59b6",
+      "active": true
+    }
+  },
+  {
+    "model": "tickets.ticketstatus",
+    "pk": 4,
+    "fields": {
+      "code": "WORKING",
+      "name": "Working",
+      "description": "Technician is working on the issue",
+      "order": 4,
+      "is_final": false,
+      "color": "#f1c40f",
+      "active": true
+    }
+  },
+  {
+    "model": "tickets.ticketstatus",
+    "pk": 5,
+    "fields": {
+      "code": "RESOLVED",
+      "name": "Resolved",
+      "description": "Issue fixed, pending approval",
+      "order": 5,
+      "is_final": false,
+      "color": "#2ecc71",
+      "active": true
+    }
+  },
+  {
+    "model": "tickets.ticketstatus",
+    "pk": 6,
+    "fields": {
+      "code": "CLOSED",
+      "name": "Closed",
+      "description": "Leader approved and closed the ticket",
+      "order": 6,
+      "is_final": true,
+      "color": "#34495e",
+      "active": true
+    }
+  },
+  {
+    "model": "tickets.ticketstatus",
+    "pk": 7,
+    "fields": {
+      "code": "CANCELLED",
+      "name": "Cancelled",
+      "description": "Ticket cancelled or duplicated",
+      "order": 99,
+      "is_final": true,
+      "color": "#e74c3c",
+      "active": true
+    }
+  }
+]
