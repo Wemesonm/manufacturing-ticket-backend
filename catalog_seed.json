@@ -8,46 +8,15 @@
     }
   },
   {
-    "model": "catalog.processtype",
-    "pk": 1,
-    "fields": {
-      "name": "SMT",
-      "description": "Surface Mount Technology line"
-    }
-  },
-  {
-    "model": "catalog.processtype",
-    "pk": 2,
-    "fields": {
-      "name": "PTH",
-      "description": "Through Hole Assembly"
-    }
-  },
-  {
-    "model": "catalog.processtype",
-    "pk": 3,
-    "fields": {
-      "name": "CELL",
-      "description": "Manual or semi-automatic cell assembly"
-    }
-  },
-  {
-    "model": "catalog.processtype",
-    "pk": 4,
-    "fields": {
-      "name": "TEST",
-      "description": "Functional and ICT testing processes"
-    }
-  },
-  {
     "model": "catalog.line",
     "pk": 1,
     "fields": {
       "site": 1,
       "code": "SMT-01",
       "name": "Surface Mount Line 01",
-      "process_type": 1,
-      "active": true
+      "active": true,
+      "created_at": "2025-01-01T12:00:00Z",
+      "updated_at": "2025-01-01T12:00:00Z"
     }
   },
   {
@@ -57,8 +26,9 @@
       "site": 1,
       "code": "PTH-01",
       "name": "Through Hole Line 01",
-      "process_type": 2,
-      "active": true
+      "active": true,
+      "created_at": "2025-01-01T12:00:00Z",
+      "updated_at": "2025-01-01T12:00:00Z"
     }
   },
   {
@@ -68,72 +38,9 @@
       "site": 1,
       "code": "TEST-01",
       "name": "Functional Test Area",
-      "process_type": 4,
-      "active": true
-    }
-  },
-  {
-    "model": "catalog.machinetype",
-    "pk": 1,
-    "fields": {
-      "name": "SPI",
-      "description": "Solder Paste Inspection"
-    }
-  },
-  {
-    "model": "catalog.machinetype",
-    "pk": 2,
-    "fields": {
-      "name": "PNP",
-      "description": "Pick and Place machine"
-    }
-  },
-  {
-    "model": "catalog.machinetype",
-    "pk": 3,
-    "fields": {
-      "name": "AOI",
-      "description": "Automatic Optical Inspection"
-    }
-  },
-  {
-    "model": "catalog.machinetype",
-    "pk": 4,
-    "fields": {
-      "name": "Reflow",
-      "description": "Reflow oven process"
-    }
-  },
-  {
-    "model": "catalog.machinetype",
-    "pk": 5,
-    "fields": {
-      "name": "Conveyor",
-      "description": "Material transfer conveyor"
-    }
-  },
-  {
-    "model": "catalog.machinetype",
-    "pk": 6,
-    "fields": {
-      "name": "ICT",
-      "description": "In-Circuit Test station"
-    }
-  },
-  {
-    "model": "catalog.machinetype",
-    "pk": 7,
-    "fields": {
-      "name": "Wave",
-      "description": "Wave soldering machine"
-    }
-  },
-  {
-    "model": "catalog.machinetype",
-    "pk": 8,
-    "fields": {
-      "name": "Selective",
-      "description": "Selective soldering system"
+      "active": true,
+      "created_at": "2025-01-01T12:00:00Z",
+      "updated_at": "2025-01-01T12:00:00Z"
     }
   },
   {
@@ -143,9 +50,10 @@
       "line": 1,
       "code": "SPI-01",
       "name": "SPI Viscom 7056",
-      "machine_type": 1,
       "asset_tag": "SMT01-SPI-001",
-      "active": true
+      "active": true,
+      "created_at": "2025-01-01T12:00:00Z",
+      "updated_at": "2025-01-01T12:00:00Z"
     }
   },
   {
@@ -155,9 +63,10 @@
       "line": 1,
       "code": "PNP-01",
       "name": "Pick & Place Fuji NXT",
-      "machine_type": 2,
       "asset_tag": "SMT01-PNP-001",
-      "active": true
+      "active": true,
+      "created_at": "2025-01-01T12:00:00Z",
+      "updated_at": "2025-01-01T12:00:00Z"
     }
   },
   {
@@ -167,9 +76,10 @@
       "line": 1,
       "code": "AOI-01",
       "name": "AOI Viscom 3088",
-      "machine_type": 3,
       "asset_tag": "SMT01-AOI-001",
-      "active": true
+      "active": true,
+      "created_at": "2025-01-01T12:00:00Z",
+      "updated_at": "2025-01-01T12:00:00Z"
     }
   },
   {
@@ -179,9 +89,10 @@
       "line": 1,
       "code": "REFLOW-01",
       "name": "Reflow Oven Heller 1809",
-      "machine_type": 4,
       "asset_tag": "SMT01-REFLOW-001",
-      "active": true
+      "active": true,
+      "created_at": "2025-01-01T12:00:00Z",
+      "updated_at": "2025-01-01T12:00:00Z"
     }
   },
   {
@@ -191,9 +102,10 @@
       "line": 2,
       "code": "WAVE-01",
       "name": "Wave Soldering Ersa Powerflow",
-      "machine_type": 7,
       "asset_tag": "PTH01-WAVE-001",
-      "active": true
+      "active": true,
+      "created_at": "2025-01-01T12:00:00Z",
+      "updated_at": "2025-01-01T12:00:00Z"
     }
   },
   {
@@ -203,9 +115,10 @@
       "line": 3,
       "code": "ICT-01",
       "name": "In-Circuit Test Teradyne",
-      "machine_type": 6,
       "asset_tag": "TEST01-ICT-001",
-      "active": true
+      "active": true,
+      "created_at": "2025-01-01T12:00:00Z",
+      "updated_at": "2025-01-01T12:00:00Z"
     }
   },
   {
@@ -213,8 +126,10 @@
     "pk": 1,
     "fields": {
       "name": "Machine",
+      "code": "MC",
       "description": "Equipment or mechanical failures",
-      "parent": null
+      "created_at": "2025-01-01T12:00:00Z",
+      "updated_at": "2025-01-01T12:00:00Z"
     }
   },
   {
@@ -222,8 +137,10 @@
     "pk": 2,
     "fields": {
       "name": "Method",
+      "code": "MD",
       "description": "Process setup or parameter issues",
-      "parent": null
+      "created_at": "2025-01-01T12:00:00Z",
+      "updated_at": "2025-01-01T12:00:00Z"
     }
   },
   {
@@ -231,8 +148,10 @@
     "pk": 3,
     "fields": {
       "name": "Material",
+      "code": "MT",
       "description": "Component or solder paste related",
-      "parent": null
+      "created_at": "2025-01-01T12:00:00Z",
+      "updated_at": "2025-01-01T12:00:00Z"
     }
   },
   {
@@ -240,8 +159,10 @@
     "pk": 4,
     "fields": {
       "name": "Manpower",
+      "code": "MP",
       "description": "Human error or operation mistake",
-      "parent": null
+      "created_at": "2025-01-01T12:00:00Z",
+      "updated_at": "2025-01-01T12:00:00Z"
     }
   },
   {
@@ -249,8 +170,10 @@
     "pk": 5,
     "fields": {
       "name": "Measurement",
+      "code": "MS",
       "description": "Inspection, calibration or measurement problems",
-      "parent": null
+      "created_at": "2025-01-01T12:00:00Z",
+      "updated_at": "2025-01-01T12:00:00Z"
     }
   },
   {
@@ -260,8 +183,9 @@
       "category": 1,
       "name": "Vision Camera Error",
       "code": "MC-001",
-      "ipc_ref": "",
-      "description": "AOI or SPI camera failure, lens dirty or offline"
+      "description": "AOI or SPI camera failure, lens dirty or offline",
+      "created_at": "2025-01-01T12:00:00Z",
+      "updated_at": "2025-01-01T12:00:00Z"
     }
   },
   {
@@ -271,8 +195,9 @@
       "category": 3,
       "name": "Component Missing",
       "code": "MT-002",
-      "ipc_ref": "5.3.1",
-      "description": "Component not placed in the PCB"
+      "description": "Component not placed in the PCB",
+      "created_at": "2025-01-01T12:00:00Z",
+      "updated_at": "2025-01-01T12:00:00Z"
     }
   },
   {
@@ -282,8 +207,9 @@
       "category": 2,
       "name": "Wrong Solder Profile",
       "code": "MD-003",
-      "ipc_ref": "7.5.1",
-      "description": "Incorrect temperature profile on reflow process"
+      "description": "Incorrect temperature profile on reflow process",
+      "created_at": "2025-01-01T12:00:00Z",
+      "updated_at": "2025-01-01T12:00:00Z"
     }
   },
   {
@@ -293,8 +219,9 @@
       "category": 4,
       "name": "Operator Skipped Step",
       "code": "MP-004",
-      "ipc_ref": "",
-      "description": "Manual operation skipped during process"
+      "description": "Manual operation skipped during process",
+      "created_at": "2025-01-01T12:00:00Z",
+      "updated_at": "2025-01-01T12:00:00Z"
     }
   },
   {
@@ -304,8 +231,9 @@
       "category": 5,
       "name": "AOI Calibration Drift",
       "code": "MS-005",
-      "ipc_ref": "",
-      "description": "Inspection threshold or calibration drift issue"
+      "description": "Inspection threshold or calibration drift issue",
+      "created_at": "2025-01-01T12:00:00Z",
+      "updated_at": "2025-01-01T12:00:00Z"
     }
   },
   {
@@ -314,7 +242,9 @@
     "fields": {
       "name": "S0",
       "description": "Critical issue - safety or high impact",
-      "order": 0
+      "order": 0,
+      "created_at": "2025-01-01T12:00:00Z",
+      "updated_at": "2025-01-01T12:00:00Z"
     }
   },
   {
@@ -323,7 +253,9 @@
     "fields": {
       "name": "S1",
       "description": "Line down or urgent production stop",
-      "order": 1
+      "order": 1,
+      "created_at": "2025-01-01T12:00:00Z",
+      "updated_at": "2025-01-01T12:00:00Z"
     }
   },
   {
@@ -332,7 +264,9 @@
     "fields": {
       "name": "S2",
       "description": "Major quality issue or delayed process",
-      "order": 2
+      "order": 2,
+      "created_at": "2025-01-01T12:00:00Z",
+      "updated_at": "2025-01-01T12:00:00Z"
     }
   },
   {
@@ -341,7 +275,9 @@
     "fields": {
       "name": "S3",
       "description": "Minor issue, non-critical",
-      "order": 3
+      "order": 3,
+      "created_at": "2025-01-01T12:00:00Z",
+      "updated_at": "2025-01-01T12:00:00Z"
     }
   },
   {
@@ -350,7 +286,9 @@
     "fields": {
       "name": "S4",
       "description": "Information or improvement suggestion",
-      "order": 4
+      "order": 4,
+      "created_at": "2025-01-01T12:00:00Z",
+      "updated_at": "2025-01-01T12:00:00Z"
     }
   },
   {
