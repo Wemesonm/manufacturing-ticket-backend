@@ -1,0 +1,146 @@
+[
+  {
+    "model": "catalog.failuretype",
+    "pk": 1,
+    "fields": {
+      "category": 1,
+      "name": "Conveyor jam",
+      "code": "MC-001",
+      "description": "Mechanical jam or sensor failure in conveyor system",
+      "created_at": "2025-01-01T12:00:00Z",
+      "updated_at": "2025-01-01T12:00:00Z"
+    }
+  },
+  {
+    "model": "catalog.failuretype",
+    "pk": 2,
+    "fields": {
+      "category": 1,
+      "name": "Feeder misalignment",
+      "code": "MC-002",
+      "description": "Feeder not correctly seated or pickup error detected",
+      "created_at": "2025-01-01T12:00:00Z",
+      "updated_at": "2025-01-01T12:00:00Z"
+    }
+  },
+  {
+    "model": "catalog.failuretype",
+    "pk": 3,
+    "fields": {
+      "category": 2,
+      "name": "Wrong solder profile",
+      "code": "MD-001",
+      "description": "Incorrect reflow oven profile or temperature curve deviation",
+      "created_at": "2025-01-01T12:00:00Z",
+      "updated_at": "2025-01-01T12:00:00Z"
+    }
+  },
+  {
+    "model": "catalog.failuretype",
+    "pk": 4,
+    "fields": {
+      "category": 2,
+      "name": "Incorrect stencil alignment",
+      "code": "MD-002",
+      "description": "Stencil misaligned with PCB pattern during paste printing",
+      "created_at": "2025-01-01T12:00:00Z",
+      "updated_at": "2025-01-01T12:00:00Z"
+    }
+  },
+  {
+    "model": "catalog.failuretype",
+    "pk": 5,
+    "fields": {
+      "category": 3,
+      "name": "Component missing",
+      "code": "MT-001",
+      "description": "Component not placed in its position during PNP process",
+      "created_at": "2025-01-01T12:00:00Z",
+      "updated_at": "2025-01-01T12:00:00Z"
+    }
+  },
+  {
+    "model": "catalog.failuretype",
+    "pk": 6,
+    "fields": {
+      "category": 3,
+      "name": "Solder paste dried",
+      "code": "MT-002",
+      "description": "Expired or overexposed solder paste causing poor print",
+      "created_at": "2025-01-01T12:00:00Z",
+      "updated_at": "2025-01-01T12:00:00Z"
+    }
+  },
+  {
+    "model": "catalog.failuretype",
+    "pk": 7,
+    "fields": {
+      "category": 4,
+      "name": "Operator skipped inspection",
+      "code": "MP-001",
+      "description": "Operator failed to execute mandatory inspection step",
+      "created_at": "2025-01-01T12:00:00Z",
+      "updated_at": "2025-01-01T12:00:00Z"
+    }
+  },
+  {
+    "model": "catalog.failuretype",
+    "pk": 8,
+    "fields": {
+      "category": 4,
+      "name": "Improper part handling",
+      "code": "MP-002",
+      "description": "Parts damaged during manual assembly or loading",
+      "created_at": "2025-01-01T12:00:00Z",
+      "updated_at": "2025-01-01T12:00:00Z"
+    }
+  },
+  {
+    "model": "catalog.failuretype",
+    "pk": 9,
+    "fields": {
+      "category": 5,
+      "name": "AOI calibration drift",
+      "code": "MS-001",
+      "description": "Automatic Optical Inspection offset due to calibration drift",
+      "created_at": "2025-01-01T12:00:00Z",
+      "updated_at": "2025-01-01T12:00:00Z"
+    }
+  },
+  {
+    "model": "catalog.failuretype",
+    "pk": 10,
+    "fields": {
+      "category": 5,
+      "name": "SPI threshold mismatch",
+      "code": "MS-002",
+      "description": "Solder Paste Inspection threshold configured incorrectly",
+      "created_at": "2025-01-01T12:00:00Z",
+      "updated_at": "2025-01-01T12:00:00Z"
+    }
+  },
+  {
+    "model": "catalog.failuretype",
+    "pk": 11,
+    "fields": {
+      "category": 6,
+      "name": "High humidity in area",
+      "code": "EN-001",
+      "description": "Environmental humidity exceeding process limits",
+      "created_at": "2025-01-01T12:00:00Z",
+      "updated_at": "2025-01-01T12:00:00Z"
+    }
+  },
+  {
+    "model": "catalog.failuretype",
+    "pk": 12,
+    "fields": {
+      "category": 6,
+      "name": "Temperature variation",
+      "code": "EN-002",
+      "description": "Ambient temperature affecting solderability or machine vision",
+      "created_at": "2025-01-01T12:00:00Z",
+      "updated_at": "2025-01-01T12:00:00Z"
+    }
+  }
+]

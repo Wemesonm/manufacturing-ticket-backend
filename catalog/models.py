@@ -17,13 +17,14 @@ class Line(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self): 
-        return f"{self.code} - {self.name}"
+        return f"{self.name}"
 
 class Workstation(models.Model):
     line = models.ForeignKey(Line, on_delete=models.PROTECT, related_name="stations")
     code = models.CharField(max_length=50)
     name = models.CharField(max_length=120)
     asset_tag = models.CharField(max_length=50, blank=True, null=True)
+    order = models.PositiveIntegerField(default=0)
     active = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -51,7 +52,7 @@ class FailureType(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self): 
-        return f"{self.code or ''} {self.name}".strip()
+        return f"{self.category} - {self.name}".strip()
 
 
 class SeverityLevel(models.Model):

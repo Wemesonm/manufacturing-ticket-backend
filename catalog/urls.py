@@ -1,15 +1,27 @@
-from django.urls import path, include
-from rest_framework.routers import DefaultRouter
-from .views import SiteViewSet, LineViewSet, WorkstationViewSet, FailureCategoryViewSet, FailureTypeViewSet, SeverityLevelViewSet, SLAProfileViewSet
+from django.urls import path
+from .views import *
 
+app_name = "catalog"
 
-router = DefaultRouter()
-router.register(r"sites", SiteViewSet, basename="site")
-router.register(r"lines", LineViewSet, basename="line")
-router.register(r"stations", WorkstationViewSet, basename="workstation")
-router.register(r"failure-categories", FailureCategoryViewSet, basename="failurecategory")
-router.register(r"failure-types", FailureTypeViewSet, basename="failuretype")
-router.register(r"severities", SeverityLevelViewSet, basename="severitylevel")
-router.register(r"sla-profiles", SLAProfileViewSet, basename="slaprofile")
+urlpatterns = [
+    path("sites/", SiteList.as_view(), name="site-list"),
+    path("sites/<int:pk>/", SiteDetail.as_view(), name="site-detail"),
 
-urlpatterns = [path("", include(router.urls))]
+    path("lines/", LineList.as_view(), name="line-list"),
+    path("lines/<int:pk>/", LineDetail.as_view(), name="line-detail"),
+
+    path("workstations/", WorkstationList.as_view(), name="workstation-list"),
+    path("workstations/<int:pk>/", WorkstationDetail.as_view(), name="workstation-detail"),
+
+    path("failure-categories/", FailureCategoryList.as_view(), name="failurecategory-list"),
+    path("failure-categories/<int:pk>/", FailureCategoryDetail.as_view(), name="failurecategory-detail"),
+
+    path("failure-types/", FailureTypeList.as_view(), name="failuretype-list"),
+    path("failure-types/<int:pk>/", FailureTypeDetail.as_view(), name="failuretype-detail"),
+
+    path("severities/", SeverityLevelList.as_view(), name="severitylevel-list"),
+    path("severities/<int:pk>/", SeverityLevelDetail.as_view(), name="severitylevel-detail"),
+
+    path("sla-profiles/", SLAProfileList.as_view(), name="slaprofile-list"),
+    path("sla-profiles/<int:pk>/", SLAProfileDetail.as_view(), name="slaprofile-detail"),
+]

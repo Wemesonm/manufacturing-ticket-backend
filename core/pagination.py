@@ -22,7 +22,7 @@ class AppPagination(PageNumberPagination):
 
     def get_paginated_response(self, data):
         total = self.page.paginator.count
-        per_page = self.get_page_size(self.request) or self.page.paginator.per_page
+        per_page = self.get_page_size(self.request) or self.page.paginator.per_page                    
         current_page = self.page.number
         last_page = ceil(total / per_page) if per_page else 1
 
@@ -48,4 +48,4 @@ class AppPagination(PageNumberPagination):
                 "previous_page_url": prev_page_url,
             },
             "data": data,
-        })
+        }) 
