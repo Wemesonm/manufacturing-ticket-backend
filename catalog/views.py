@@ -4,16 +4,16 @@ from django_filters.rest_framework import DjangoFilterBackend
 from .models import Site, Line, Workstation, FailureCategory, FailureType, SeverityLevel, SLAProfile
 from .serializers import *
 from core.pagination import AppPagination
-
+from core.permissions import GlobalDefaultPermission
 class ROBaseList(generics.ListAPIView):
-    permission_classes =(IsAuthenticated,)
+    permission_classes =(IsAuthenticated,GlobalDefaultPermission,)
     pagination_class = AppPagination
     filter_backends = [DjangoFilterBackend, filters.OrderingFilter, filters.SearchFilter]
     # subclasses definem: queryset, serializer_class, filterset_fields, search_fields, ordering_fields
 
 class ROBaseDetail(generics.RetrieveAPIView):
     # subclasses definem: queryset, serializer_class
-     permission_classes =(IsAuthenticated,)
+     permission_classes =(IsAuthenticated, GlobalDefaultPermission,)
 class SiteList(ROBaseList):
     queryset = Site.objects.all().order_by("name")
     serializer_class = SiteSerializer

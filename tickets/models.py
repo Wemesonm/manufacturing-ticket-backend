@@ -56,8 +56,8 @@ class Ticket(models.Model):
 
     # RCA
     root_cause = models.CharField(max_length=140, null=True, blank=True)
-    corrective_action = models.TextField(blank=True)
-    preventive_action = models.TextField(blank=True)
+    corrective_action = models.TextField(null=True, blank=True)
+    preventive_action = models.TextField(null=True, blank=True)
 
     # métricas calculadas
     @property

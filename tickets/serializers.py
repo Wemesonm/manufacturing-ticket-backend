@@ -7,6 +7,7 @@ class TicketModelSerializer(serializers.ModelSerializer):
     class Meta:
         model = Ticket
         fields = "__all__"
+        read_only_fields = ["opened_by"]
         
 
 class TicketListDetailSerializer(serializers.ModelSerializer):
@@ -14,6 +15,7 @@ class TicketListDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = Ticket
         fields = "__all__"
+        read_only_fields = ["opened_by"]
 
 
 class TicketStatusSerializer(serializers.ModelSerializer):
