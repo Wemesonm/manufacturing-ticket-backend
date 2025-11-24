@@ -1,15 +1,18 @@
 from pathlib import Path
 from datetime import timedelta
+import os
+from dotenv import load_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+load_dotenv(BASE_DIR / ".env")
 
-SECRET_KEY = 'django-insecure-!k&yu-5vn-c08jx9m1osv22o!d15q!qgsq#^op8g3)54h&#xq$'
+SECRET_KEY = os.getenv("DJANGO_SECRET_KEY")
 
-DEBUG = True
+DEBUG = os.getenv("DJANGO_DEBUG", "False") == "True"
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "").split(",")
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -58,13 +61,28 @@ TEMPLATES = [
 WSGI_APPLICATION = 'core.wsgi.application'
 
 
+DB_ENGINE = os.getenv("DB_ENGINE", "sqlite")  # padrão: sqlite
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+if DB_ENGINE == "postgres":
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': os.getenv("DB_NAME"),
+            'USER': os.getenv("DB_USER"),
+            'PASSWORD': os.getenv("DB_PASSWORD"),
+            'HOST': os.getenv("DB_HOST"),
+            'PORT': os.getenv("DB_PORT"),
+        }
     }
-}
+else:
+    # SQLite como fallback
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
+
 
 
 AUTH_PASSWORD_VALIDATORS = [
@@ -97,7 +115,10 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_ALL_ORIGINS = os.getenv("CORS_ALLOW_ALL_ORIGINS", "False") == "True"
+
+cors_origins = os.getenv("CORS_ALLOWED_ORIGINS", "")
+CORS_ALLOWED_ORIGINS = cors_origins.split(",") if cors_origins else []
 
 # quando em producao usar abaixo
 # CORS_ALLOWED_ORIGINS = [
@@ -107,12 +128,17 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.SessionAuthentication',
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     )
 }
 
 
 SIMPLE_JWT = {
-    "ACCESS_TOKEN_LIFETIME": timedelta(days=365),
-    "REFRESH_TOKEN_LIFETIME": timedelta(days=365*5),
+    "ACCESS_TOKEN_LIFETIME": timedelta(
+        days=int(os.getenv("JWT_ACCESS_LIFETIME_DAYS"))
+    ),
+    "REFRESH_TOKEN_LIFETIME": timedelta(
+        days=int(os.getenv("JWT_REFRESH_LIFETIME_DAYS"))
+    ),
 }
