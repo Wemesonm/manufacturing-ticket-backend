@@ -1,0 +1,27 @@
+version: "3.9"
+
+services:
+  ticket_db:
+    image: postgres:15
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: ticket
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    ports:
+      - "5432:5432"
+
+  ticket_api:
+    build: .
+    restart: unless-stopped
+    env_file:
+      - .envv
+    depends_on:
+      - ticket_db
+    ports:
+      - "8000:8000"
+
+volumes:
+  postgres_data:

@@ -1,0 +1,545 @@
+[
+{
+  "model": "catalog.site",
+  "pk": 1,
+  "fields": {
+    "name": "US Canton",
+    "description": "Primary manufacturing site for electronic assemblies"
+  }
+},
+{
+  "model": "catalog.line",
+  "pk": 1,
+  "fields": {
+    "site": 1,
+    "code": "SMT-01",
+    "name": "SMD 01",
+    "active": true,
+    "created_at": "2025-01-01T12:00:00Z",
+    "updated_at": "2025-11-06T00:13:25.122Z"
+  }
+},
+{
+  "model": "catalog.line",
+  "pk": 2,
+  "fields": {
+    "site": 1,
+    "code": "CAL-01",
+    "name": "CAL 01",
+    "active": true,
+    "created_at": "2025-01-01T12:00:00Z",
+    "updated_at": "2025-11-06T00:13:39.728Z"
+  }
+},
+{
+  "model": "catalog.workstation",
+  "pk": 7,
+  "fields": {
+    "line": 1,
+    "code": "LM",
+    "name": "Laser Marking",
+    "asset_tag": null,
+    "order": 1,
+    "active": true,
+    "created_at": "2025-11-06T00:14:17.773Z",
+    "updated_at": "2025-11-06T03:01:15.338Z"
+  }
+},
+{
+  "model": "catalog.workstation",
+  "pk": 8,
+  "fields": {
+    "line": 1,
+    "code": "PNP",
+    "name": "Component Placement",
+    "asset_tag": null,
+    "order": 11,
+    "active": true,
+    "created_at": "2025-11-06T00:21:00.537Z",
+    "updated_at": "2025-11-06T03:18:04.458Z"
+  }
+},
+{
+  "model": "catalog.workstation",
+  "pk": 9,
+  "fields": {
+    "line": 1,
+    "code": "CPI",
+    "name": "CPI Component Placement Inspection",
+    "asset_tag": null,
+    "order": 0,
+    "active": true,
+    "created_at": "2025-11-06T00:22:57.961Z",
+    "updated_at": "2025-11-06T00:22:57.961Z"
+  }
+},
+{
+  "model": "catalog.workstation",
+  "pk": 10,
+  "fields": {
+    "line": 1,
+    "code": "RSO",
+    "name": "Reflow Soldering",
+    "asset_tag": null,
+    "order": 0,
+    "active": true,
+    "created_at": "2025-11-06T00:23:24.839Z",
+    "updated_at": "2025-11-06T00:23:24.839Z"
+  }
+},
+{
+  "model": "catalog.workstation",
+  "pk": 11,
+  "fields": {
+    "line": 1,
+    "code": "SPI",
+    "name": "Solder Paste Inspection",
+    "asset_tag": null,
+    "order": 9,
+    "active": true,
+    "created_at": "2025-11-06T00:23:47.302Z",
+    "updated_at": "2025-11-06T03:18:16.339Z"
+  }
+},
+{
+  "model": "catalog.workstation",
+  "pk": 12,
+  "fields": {
+    "line": 1,
+    "code": "SPJ",
+    "name": "Solder Paste Jetting",
+    "asset_tag": null,
+    "order": 7,
+    "active": true,
+    "created_at": "2025-11-06T00:26:06.675Z",
+    "updated_at": "2025-11-06T03:18:31.678Z"
+  }
+},
+{
+  "model": "catalog.workstation",
+  "pk": 13,
+  "fields": {
+    "line": 1,
+    "code": "SPR",
+    "name": "Solder Paste Printing",
+    "asset_tag": null,
+    "order": 5,
+    "active": true,
+    "created_at": "2025-11-06T00:26:27.931Z",
+    "updated_at": "2025-11-06T03:17:25.514Z"
+  }
+},
+{
+  "model": "catalog.workstation",
+  "pk": 14,
+  "fields": {
+    "line": 1,
+    "code": "SJI",
+    "name": "Solder-Joint Inspection",
+    "asset_tag": null,
+    "order": 0,
+    "active": true,
+    "created_at": "2025-11-06T00:26:52.847Z",
+    "updated_at": "2025-11-06T00:26:52.847Z"
+  }
+},
+{
+  "model": "catalog.workstation",
+  "pk": 15,
+  "fields": {
+    "line": 1,
+    "code": "LM-MB",
+    "name": "LM Magazine Buffer",
+    "asset_tag": null,
+    "order": 2,
+    "active": true,
+    "created_at": "2025-11-06T02:51:29.342Z",
+    "updated_at": "2025-11-06T03:02:15.740Z"
+  }
+},
+{
+  "model": "catalog.workstation",
+  "pk": 16,
+  "fields": {
+    "line": 1,
+    "code": "SPR-AI",
+    "name": "SPR Asys Inverter",
+    "asset_tag": null,
+    "order": 3,
+    "active": true,
+    "created_at": "2025-11-06T02:52:18.424Z",
+    "updated_at": "2025-11-06T03:12:34.300Z"
+  }
+},
+{
+  "model": "catalog.workstation",
+  "pk": 17,
+  "fields": {
+    "line": 1,
+    "code": "SPR-SC",
+    "name": "SPR Scan Conveyor",
+    "asset_tag": null,
+    "order": 4,
+    "active": true,
+    "created_at": "2025-11-06T02:52:58.444Z",
+    "updated_at": "2025-11-06T03:12:47.685Z"
+  }
+},
+{
+  "model": "catalog.workstation",
+  "pk": 18,
+  "fields": {
+    "line": 1,
+    "code": "SPJ-SC",
+    "name": "SPJ Scan Conveyor",
+    "asset_tag": null,
+    "order": 6,
+    "active": true,
+    "created_at": "2025-11-06T02:53:41.811Z",
+    "updated_at": "2025-11-06T03:17:36.402Z"
+  }
+},
+{
+  "model": "catalog.workstation",
+  "pk": 19,
+  "fields": {
+    "line": 1,
+    "code": "SPI SC",
+    "name": "SPI Scan Conveyor",
+    "asset_tag": null,
+    "order": 8,
+    "active": true,
+    "created_at": "2025-11-06T02:54:16.672Z",
+    "updated_at": "2025-11-06T03:18:23.734Z"
+  }
+},
+{
+  "model": "catalog.workstation",
+  "pk": 20,
+  "fields": {
+    "line": 1,
+    "code": "PNP-SC",
+    "name": "PNP Scan Conveyor",
+    "asset_tag": null,
+    "order": 10,
+    "active": true,
+    "created_at": "2025-11-06T03:15:41.483Z",
+    "updated_at": "2025-11-06T03:18:09.903Z"
+  }
+},
+{
+  "model": "catalog.failurecategory",
+  "pk": 1,
+  "fields": {
+    "name": "Machine",
+    "code": "MC",
+    "description": "Equipment or mechanical failures",
+    "created_at": "2025-01-01T12:00:00Z",
+    "updated_at": "2025-01-01T12:00:00Z"
+  }
+},
+{
+  "model": "catalog.failurecategory",
+  "pk": 2,
+  "fields": {
+    "name": "Method",
+    "code": "MD",
+    "description": "Process setup or parameter issues",
+    "created_at": "2025-01-01T12:00:00Z",
+    "updated_at": "2025-01-01T12:00:00Z"
+  }
+},
+{
+  "model": "catalog.failurecategory",
+  "pk": 3,
+  "fields": {
+    "name": "Material",
+    "code": "MT",
+    "description": "Component or solder paste related",
+    "created_at": "2025-01-01T12:00:00Z",
+    "updated_at": "2025-01-01T12:00:00Z"
+  }
+},
+{
+  "model": "catalog.failurecategory",
+  "pk": 4,
+  "fields": {
+    "name": "Manpower",
+    "code": "MP",
+    "description": "Human error or operation mistake",
+    "created_at": "2025-01-01T12:00:00Z",
+    "updated_at": "2025-01-01T12:00:00Z"
+  }
+},
+{
+  "model": "catalog.failurecategory",
+  "pk": 5,
+  "fields": {
+    "name": "Measurement",
+    "code": "MS",
+    "description": "Inspection, calibration or measurement problems",
+    "created_at": "2025-01-01T12:00:00Z",
+    "updated_at": "2025-01-01T12:00:00Z"
+  }
+},
+{
+  "model": "catalog.failurecategory",
+  "pk": 6,
+  "fields": {
+    "name": "Environment",
+    "code": "",
+    "description": "",
+    "created_at": "2025-11-04T11:57:37.732Z",
+    "updated_at": "2025-11-04T11:57:37.733Z"
+  }
+},
+{
+  "model": "catalog.failuretype",
+  "pk": 1,
+  "fields": {
+    "category": 1,
+    "name": "Conveyor jam",
+    "code": "MC-001",
+    "description": "Mechanical jam or sensor failure in conveyor system",
+    "created_at": "2025-01-01T12:00:00Z",
+    "updated_at": "2025-01-01T12:00:00Z"
+  }
+},
+{
+  "model": "catalog.failuretype",
+  "pk": 2,
+  "fields": {
+    "category": 1,
+    "name": "Feeder misalignment",
+    "code": "MC-002",
+    "description": "Feeder not correctly seated or pickup error detected",
+    "created_at": "2025-01-01T12:00:00Z",
+    "updated_at": "2025-01-01T12:00:00Z"
+  }
+},
+{
+  "model": "catalog.failuretype",
+  "pk": 3,
+  "fields": {
+    "category": 2,
+    "name": "Wrong solder profile",
+    "code": "MD-001",
+    "description": "Incorrect reflow oven profile or temperature curve deviation",
+    "created_at": "2025-01-01T12:00:00Z",
+    "updated_at": "2025-01-01T12:00:00Z"
+  }
+},
+{
+  "model": "catalog.failuretype",
+  "pk": 4,
+  "fields": {
+    "category": 2,
+    "name": "Incorrect stencil alignment",
+    "code": "MD-002",
+    "description": "Stencil misaligned with PCB pattern during paste printing",
+    "created_at": "2025-01-01T12:00:00Z",
+    "updated_at": "2025-01-01T12:00:00Z"
+  }
+},
+{
+  "model": "catalog.failuretype",
+  "pk": 5,
+  "fields": {
+    "category": 3,
+    "name": "Component missing",
+    "code": "MT-001",
+    "description": "Component not placed in its position during PNP process",
+    "created_at": "2025-01-01T12:00:00Z",
+    "updated_at": "2025-01-01T12:00:00Z"
+  }
+},
+{
+  "model": "catalog.failuretype",
+  "pk": 6,
+  "fields": {
+    "category": 3,
+    "name": "Solder paste dried",
+    "code": "MT-002",
+    "description": "Expired or overexposed solder paste causing poor print",
+    "created_at": "2025-01-01T12:00:00Z",
+    "updated_at": "2025-01-01T12:00:00Z"
+  }
+},
+{
+  "model": "catalog.failuretype",
+  "pk": 7,
+  "fields": {
+    "category": 4,
+    "name": "Operator skipped inspection",
+    "code": "MP-001",
+    "description": "Operator failed to execute mandatory inspection step",
+    "created_at": "2025-01-01T12:00:00Z",
+    "updated_at": "2025-01-01T12:00:00Z"
+  }
+},
+{
+  "model": "catalog.failuretype",
+  "pk": 8,
+  "fields": {
+    "category": 4,
+    "name": "Improper part handling",
+    "code": "MP-002",
+    "description": "Parts damaged during manual assembly or loading",
+    "created_at": "2025-01-01T12:00:00Z",
+    "updated_at": "2025-01-01T12:00:00Z"
+  }
+},
+{
+  "model": "catalog.failuretype",
+  "pk": 9,
+  "fields": {
+    "category": 5,
+    "name": "AOI calibration drift",
+    "code": "MS-001",
+    "description": "Automatic Optical Inspection offset due to calibration drift",
+    "created_at": "2025-01-01T12:00:00Z",
+    "updated_at": "2025-01-01T12:00:00Z"
+  }
+},
+{
+  "model": "catalog.failuretype",
+  "pk": 10,
+  "fields": {
+    "category": 5,
+    "name": "SPI threshold mismatch",
+    "code": "MS-002",
+    "description": "Solder Paste Inspection threshold configured incorrectly",
+    "created_at": "2025-01-01T12:00:00Z",
+    "updated_at": "2025-01-01T12:00:00Z"
+  }
+},
+{
+  "model": "catalog.failuretype",
+  "pk": 11,
+  "fields": {
+    "category": 6,
+    "name": "High humidity in area",
+    "code": "EN-001",
+    "description": "Environmental humidity exceeding process limits",
+    "created_at": "2025-01-01T12:00:00Z",
+    "updated_at": "2025-01-01T12:00:00Z"
+  }
+},
+{
+  "model": "catalog.failuretype",
+  "pk": 12,
+  "fields": {
+    "category": 6,
+    "name": "Temperature variation",
+    "code": "EN-002",
+    "description": "Ambient temperature affecting solderability or machine vision",
+    "created_at": "2025-01-01T12:00:00Z",
+    "updated_at": "2025-01-01T12:00:00Z"
+  }
+},
+{
+  "model": "catalog.severitylevel",
+  "pk": 1,
+  "fields": {
+    "name": "S0",
+    "description": "Critical issue - safety or high impact",
+    "order": 0,
+    "created_at": "2025-01-01T12:00:00Z",
+    "updated_at": "2025-01-01T12:00:00Z"
+  }
+},
+{
+  "model": "catalog.severitylevel",
+  "pk": 2,
+  "fields": {
+    "name": "S1",
+    "description": "Line down or urgent production stop",
+    "order": 1,
+    "created_at": "2025-01-01T12:00:00Z",
+    "updated_at": "2025-01-01T12:00:00Z"
+  }
+},
+{
+  "model": "catalog.severitylevel",
+  "pk": 3,
+  "fields": {
+    "name": "S2",
+    "description": "Major quality issue or delayed process",
+    "order": 2,
+    "created_at": "2025-01-01T12:00:00Z",
+    "updated_at": "2025-01-01T12:00:00Z"
+  }
+},
+{
+  "model": "catalog.severitylevel",
+  "pk": 4,
+  "fields": {
+    "name": "S3",
+    "description": "Minor issue, non-critical",
+    "order": 3,
+    "created_at": "2025-01-01T12:00:00Z",
+    "updated_at": "2025-01-01T12:00:00Z"
+  }
+},
+{
+  "model": "catalog.severitylevel",
+  "pk": 5,
+  "fields": {
+    "name": "S4",
+    "description": "Information or improvement suggestion",
+    "order": 4,
+    "created_at": "2025-01-01T12:00:00Z",
+    "updated_at": "2025-01-01T12:00:00Z"
+  }
+},
+{
+  "model": "catalog.slaprofile",
+  "pk": 1,
+  "fields": {
+    "severity": 1,
+    "mtta_target_min": 5,
+    "mttr_target_min": 30,
+    "active": true
+  }
+},
+{
+  "model": "catalog.slaprofile",
+  "pk": 2,
+  "fields": {
+    "severity": 2,
+    "mtta_target_min": 10,
+    "mttr_target_min": 60,
+    "active": true
+  }
+},
+{
+  "model": "catalog.slaprofile",
+  "pk": 3,
+  "fields": {
+    "severity": 3,
+    "mtta_target_min": 20,
+    "mttr_target_min": 120,
+    "active": true
+  }
+},
+{
+  "model": "catalog.slaprofile",
+  "pk": 4,
+  "fields": {
+    "severity": 4,
+    "mtta_target_min": 30,
+    "mttr_target_min": 240,
+    "active": true
+  }
+},
+{
+  "model": "catalog.slaprofile",
+  "pk": 5,
+  "fields": {
+    "severity": 5,
+    "mtta_target_min": 60,
+    "mttr_target_min": 480,
+    "active": true
+  }
+}
+]

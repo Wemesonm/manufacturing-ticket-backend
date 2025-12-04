@@ -1,0 +1,18 @@
+# Virtual env
+venv/
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Django SQLite (não deve ir pra imagem)
+db.sqlite3
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# Git
+.git/
+.gitignore
