@@ -1,43 +1,31 @@
-name: Deploy to Hostinger VPS
+- name: Deploy over SSH to VPS
+  uses: appleboy/ssh-action@v1.2.0
+  with:
+    host: ${{ secrets.SSH_HOST }}
+    username: ${{ secrets.SSH_USER }}
+    key: ${{ secrets.SSH_KEY }}
+    port: 22
+    script: |
+      set -e
 
-on:
-  push:
-    branches: ["main"]
+      # 1) Garante que a pasta exista
+      mkdir -p ~/ticket_app
+      cd ~/ticket_app
 
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
+      # 2) Clona o repo só na primeira vez
+      if [ ! -d manufacturing-ticket-backend ]; then
+        git clone https://github.com/Wemesonm/manufacturing-ticket-backend.git
+      fi
 
-    steps:
-      - name: Checkout repository (required by some actions)
-        uses: actions/checkout@v4
+      # 3) Vai para a pasta do repo (SEM /backend no final)
+      cd manufacturing-ticket-backend
 
-      - name: Deploy over SSH to VPS
-        uses: appleboy/ssh-action@v1.2.0
-        with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.SSH_KEY }}
-          port: 22
-          script: |
-            set -e
+      # 4) Puxa a última versão da main
+      git pull origin main
 
-            # 1) Garante que a pasta existe
-            mkdir -p ~/ticket_app
-            cd ~/ticket_app
+      # 5) Sobe os containers com a nova versão
+      docker compose down
+      docker compose up -d --build
 
-            # 2) Clona o repo só na primeira vez
-            if [ ! -d "manufacturing-ticket-backend" ]; then
-              git clone https://github.com/Wemesonm/manufacturing-ticket-backend.git
-            fi
-
-            # 3) Vai para a pasta do backend e puxa a última main
-            cd manufacturing-ticket-backend/backend
-            git pull origin main
-
-            # 4) Sobe os containers com a nova versão
-            docker compose down
-            docker compose up -d --build
-
-            # 5) Limpa imagens antigas (opcional)
-            docker system prune -f
+      # 6) Limpa imagens antigas (opcional)
+      docker system prune -f
