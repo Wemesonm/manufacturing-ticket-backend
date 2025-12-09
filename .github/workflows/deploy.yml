@@ -12,7 +12,7 @@
       mkdir -p ~/ticket_app
       cd ~/ticket_app
 
-      # 2) Clona o repo só na primeira vez
+      # 2) Clona o repo só na primeira vez para verificar
       if [ ! -d manufacturing-ticket-backend ]; then
         git clone https://github.com/Wemesonm/manufacturing-ticket-backend.git
       fi
