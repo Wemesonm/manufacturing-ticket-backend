@@ -151,8 +151,9 @@ SIMPLE_JWT = {
     ),
 }
 
+ENABLE_SSL = os.getenv("ENABLE_SSL", "False") == "True"
 
-if not DEBUG:
+if ENABLE_SSL:
     # Cookies só por HTTPS
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SECURE = True
