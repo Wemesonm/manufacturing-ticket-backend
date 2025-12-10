@@ -33,15 +33,15 @@ def api_root(request, format=None):
 
 
 urlpatterns = [
-    path('ticketapi/admin/', admin.site.urls),
+    path('ticket/admin/', admin.site.urls),
 
     # Root da API
-    path('ticketapi/v1/', api_root, name="api-root"),
+    path('ticket/api/', api_root, name="api-root"),
 
     # Apps
-    path('ticketapi/v1/', include('authentication.urls')),
-    path('ticketapi/v1/', include("catalog.urls")),
-    path('ticketapi/v1/', include("tickets.urls")),
+    path('ticket/api/', include('authentication.urls')),
+    path('ticket/api/', include("catalog.urls")),
+    path('ticket/api/', include("tickets.urls")),
 ]
 
 
